@@ -1,28 +1,66 @@
 ---
-title: "F1 Las Vegas 2024: The Data Driven Review"
+title: "Analysis of the Melbourne Grand Prix 2024: Performance Insights and Future Projections"
 author: "Arthav Patel"
 format: html
 ---
 
 # Introduction
+In this project, I will analyze the qualifying and race day performances of the Melbourne Grand Prix 2024. The objective is to gain insights into team strategies, individual driver performances, and the reliability of key vehicles, specifically focusing on the RB20. Additionally, I will explore future projections concerning the performance of the RB20 compared to the RB2 and assess the potential for Max Verstappen to secure another world championship title.
 
-This is an analysis of the 2024 F1 Las Vegas Grand Prix using data science techniques.
+## Research Questions
+
+### Team Performance in the Melbourne GP 2024
+1. What were the qualifying and race day performances of each team?
+2. How did team strategies impact overall results during the race?
+
+### Reliability of the RB20
+1. Why was the performance of the RB20 deemed unreliable during the race?
+2. What factors contributed to any discrepancies between qualifying and race day performance?
+
+### Performance of the Drivers in the Melbourne GP 2024
+1. How did individual drivers perform during the qualifying sessions and the race?
+2. What were the key factors affecting driver performance?
+
+## Future Projections
+
+### Performance Comparison: RB20 vs. RB2
+1. How does the performance of the RB20 compare to that of the RB2 in terms of speed, reliability, and race outcomes?
+2. What insights can be drawn from past performance data to evaluate these two models?
+
+### Max Verstappen's Championship Potential
+1. Based on current performance trends and historical data, what are the chances of Max Verstappen becoming the world champion again?
+2. What factors could influence his performance in the remaining races of the season?
 
 ## Data Analysis
 
 ```{python}
-# Sample Python code
-import pandas as pd
+import fastf1
+import matplotlib.pyplot as plt
 
-print("Hello, F1 Data Analysis!")
-- Press `Ctrl + X`, then `Y`, then `Enter` to save and exit.
+# Enable cache
+fastf1.Cache.enable_cache('/Users/arthavpatel/Desktop/project/f1_cache')
 
-### **3. Add and Commit the File to GitHub**
-After creating `analysis.qmd`, you need to upload it to your GitHub repository.
+# Load 2023 Las Vegas GP data
+race = fastf1.get_session(2023, "Las Vegas", "R")
+race.load()
 
-Run the following commands:
+# Define drivers
+driver1 = 'VER'  # Max Verstappen
+driver2 = 'LEC'  # Charles Leclerc
 
-```bash
-git add analysis.qmd
-git commit -m "Added analysis.qmd file"
-git push origin main
+# Get laps for driver1
+laps = race.laps.pick_driver(driver1)
+lap_numbers = laps['LapNumber']
+lap_times = laps['LapTime'].dt.total_seconds()  # Convert timedelta to seconds
+
+# Plot lap time evolution
+plt.figure(figsize=(10, 5))
+plt.plot(lap_numbers, lap_times, marker='o', linestyle='-', label=f"{driver1}'s Lap Times")
+plt.xlabel("Lap Number")
+plt.ylabel("Lap Time (s)")
+plt.title(f"{driver1} Lap Time Evolution - 2023 Las Vegas GP")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+```
