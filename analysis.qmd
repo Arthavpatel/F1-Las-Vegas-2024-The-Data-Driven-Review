@@ -1,0 +1,28 @@
+---
+title: "F1 Las Vegas 2024: The Data Driven Review"
+author: "Arthav Patel"
+format: html
+---
+
+# Introduction
+
+This is an analysis of the 2024 F1 Las Vegas Grand Prix using data science techniques.
+
+## Data Analysis
+
+```{python}
+# Sample Python code
+import pandas as pd
+
+print("Hello, F1 Data Analysis!")
+- Press `Ctrl + X`, then `Y`, then `Enter` to save and exit.
+
+### **3. Add and Commit the File to GitHub**
+After creating `analysis.qmd`, you need to upload it to your GitHub repository.
+
+Run the following commands:
+
+```bash
+git add analysis.qmd
+git commit -m "Added analysis.qmd file"
+git push origin main
