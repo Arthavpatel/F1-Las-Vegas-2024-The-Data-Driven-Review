@@ -161,24 +161,24 @@ Lando Norris' **01:11.383** lap time in the 2024 Spanish Grand Prix qualifying s
 - The rear stability of the **RB20** ensured that the car could exit the corner with **maximum speed** and **acceleration**.
 - Furthermore, in **Turn 9**, a high-speed corner that demands significant downforce and low drag, the **RB20** outperformed most of its competitors, enabling consistent performance through this high-speed corner.
 
-## Power Unit Strategy
+### Power Unit Strategy
 
-### Honda RA621H Power Unit
+#### Honda RA621H Power Unit
 - The **RB20** utilized the **Honda RA621H** power unit, which boasted significant enhancements over the **RB19's** engine in terms of **performance**, **reliability**, and **energy recovery efficiency**.
 - These improvements were particularly noticeable in the car's ability to achieve **rapid acceleration** out of slow corners and maintain **high speeds** on the straights.
 
-### Energy Deployment
+#### Energy Deployment
 - Red Bull effectively optimized the **Energy Recovery System (ERS)** deployment to provide a performance boost in critical areas, including:
   - **Exiting Turn 14**: The final chicane demanded precise throttle control and quick acceleration onto the main straight. The **RB20’s** power unit excelled here, enabling Verstappen to gain valuable time.
   - **Turn 5 (Bottas Corner)**: The combination of the car's mechanical grip and power unit efficiency helped to minimize tyre degradation, allowing Verstappen to push harder through this high-speed corner.
 
-## Tyre Strategy
+### Tyre Strategy
 
-### Qualifying
+#### Qualifying
 - Red Bull opted for **soft tyres** during qualifying to maximize their performance.
 - The team concentrated on **aggressive tyre warm-up techniques** to ensure that the tyres reached their optimal temperature early in the lap, which proved crucial for achieving a fast time in **Q3**.
 
-### Race Considerations
+#### Race Considerations
 - While qualifying focused on **single-lap performance**, Red Bull also prioritized **tyre management** for the race.
 - Given that the **Circuit de Barcelona-Catalunya** is notorious for high tyre degradation, the team strived to establish a setup that effectively balanced **qualifying speed** with **race durability**.
 
@@ -197,11 +197,34 @@ Red Bull Racing's strategy for the 2024 Spanish Grand Prix emphasized **aerodyna
     - In **Turn 3 and Turn 9**, the consistent downforce may cause **heightened tyre wear**, requiring drivers to be more **cautious** with their **speed**. This could lead to **time losses** against competitors such as **McLaren, Ferrari, and Red Bull Racing**, who might possess superior tyre management techniques.
     - The focus on constant downforce can also **increase drag**, reducing top speed on the **main straight** and making **overtaking more difficult**.
 
-## Power Unit
+### Power Unit
 - The W15 showcased a completely overhauled power unit, featuring major enhancements in the **energy recovery system (ERS)** and its **deployment strategies**. These advancements resulted in improved **acceleration and maximum speed**, which were essential for performance during both qualifying and racing scenarios. Nonetheless, the idea of consistent downforce can exert **extra pressure** on the power unit and ERS, especially in **high-speed** turns such as **Turn 3 and Turn 9**. This might lead to **potential reliability** concerns, but Mercedes effectively managed to minimize these risks throughout the 2024 season.
 
-## Tyre Management
+### Tyre Management
 - Mercedes chose to use **soft tyres** during the qualifying session, emphasizing a setup that maintained a **balance** between qualifying **speed and race longevity**. The team implemented **aggressive techniques** to **warm up the tyres**, ensuring they reached the **optimal temperature ** range early in the lap, which was essential for achieving a competitive time in **Q3**. However, the **increased downforce levels** of the W15 might result in **greater tyre wea** during the race, requiring Hamilton to be more **strategic** with his pace in comparison to **competitors** who manage their tyres more **effectively**.
 
 ## Conclusion
 - Lewis Hamilton's qualifying time of **1:11.701** during the **2024 Spanish Grand Prix** reflects the considerable advancements achieved by Mercedes with the **W15**. The car's reworked **aerodynamics**, especially the departure from the **"zero-pod" **design, enhanced stability and consistency in downforce, enabling Hamilton to **excel** in both high-speed corners like **Turn 3 and Turn 9** and in the intricate final chicane. The upgraded power unit, featuring **improved energy recovery** and **deployment strategies**, offered enhanced acceleration and top speed, further elevating the vehicle's overall performance.
+
+--- 
+
+# Charles Leclerc (Ferrari - SF-24): 1:11:731
+
+## Analysis
+
+### Aerodynamics
+- The SF-24 features significant aerodynamic improvements over its predecessor, the SF-23. The **sidepods** have been redesigned with **inspiration from Red Bull’s concept**, featuring a more **sculpted shape** to enhance **airflow efficiency**. This has contributed to better overall **aerodynamic performance**.
+- The **front wing** has been re-engineered to address the **stability issues** that plagued the **SF-23**. The previous design lacked balance, making the **car unpredictable** in both **high-speed and low-speed corners**. The new front wing provides improved stability, allowing for more consistent performance across different corner types.
+- At the rear, the SF-23’s wing generated **excessive drag**, which negatively **impacted top speed and tire wear**. The SF-24 addresses this with a more efficient rear wing design, **reducing drag and improving straight-line speed**. This was particularly evident from **Turn 14 to Turn 1** at the Circuit de Barcelona-Catalunya, where the car demonstrated superior top speed and tire management.
+- In high-speed corners, such as **Turn 3 and Turn 9**, the SF-24 showcased competitive performance, a testament to its enhanced aerodynamic efficiency. However, in low-speed corners like Turn 10 and Turn 14, the car exhibited **minor traction** issues, which slightly affected lap times.
+
+### Power Unit
+- The SF-24 retains the same power unit as the SF-23, the **066/10 hybrid power unit**. However, Ferrari has improved the **cooling efficiency** of the engine, allowing for better **thermal management** and sustained performance over longer stints. While the power output remains similar, the enhanced cooling system contributes to greater reliability and consistency during races.
+
+### Tire Management
+- During the race, Ferrari faced challenges related to **tire management**. The team struggled with pace and **tire degradation** possibly due to a **limited understanding** of the new updates introduced to the car. This suggests that while the SF-24 showed promise in qualifying, there were underlying issues affecting its performance consistency during **longer runs** in the race.
+
+# Conclusion
+- **Charles Leclerc** completed the lap in **1:11.731**, which was competitive and faster than most of the field. However, the SF-24 was unable to match the performance of cars like the **Red Bull RB20, McLaren MCL38, and Mercedes W15** during the qualifying session in Spanish Grand Prix. This underperformance in race conditions, particularly in long runs, highlights the need for further improvements in **tire management and race pace**.
+
+---

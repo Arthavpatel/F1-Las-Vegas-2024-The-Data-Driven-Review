@@ -21,7 +21,8 @@ laps['LapTime(min)'] = laps['LapTime'].dt.total_seconds() / 60  # Convert LapTim
 fastest_lap = laps.loc[laps['LapTime(min)'].idxmin()]
 
 # Find the fastest lap per team and retain LapTime for proper annotation
-fastest_team_lap = laps.loc[laps.groupby('Team')['LapTime(min)'].idxmin(), ['Team', 'LapTime(min)']]
+# Find the fastest lap per team and retain LapTime and Driver for proper annotation
+fastest_team_lap = laps.loc[laps.groupby('Team')['LapTime(min)'].idxmin(), ['Team', 'Driver', 'LapTime(min)']]
 fastest_team_lap = fastest_team_lap.sort_values(by='LapTime(min)')
 print(fastest_team_lap)
 
@@ -43,7 +44,7 @@ team_colors = {
 sns.set_theme(style="darkgrid")
 
 # Ensure correct order for teams
-team_order = fastest_team_lap["Team"]
+team_order = fastest_team_lap["Team"]  
 
 # Plotting the bar graph
 plt.figure(figsize=(7, 4))
