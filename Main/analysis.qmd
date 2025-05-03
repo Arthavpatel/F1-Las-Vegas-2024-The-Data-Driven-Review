@@ -1,0 +1,456 @@
+---
+title: "Analysis of the Spanish Grand Prix 2024: Performance Insights and Future Projections"
+author: "Arthav Patel"
+format:
+  html:
+    toc: true
+    toc-location: left
+---
+
+### Executive Summary
+- This project delivers a detailed performance analysis of the 2024 Spanish Grand Prix, with a sharp focus on the qualifying session and in-depth telemetry-based driver comparisons. Our aim is to thoroughly evaluate the aerodynamic setups, power unit deployments, and driving techniques utilized by the top four Formula 1 teams: Oracle Red Bull Racing, McLaren, Mercedes, and Ferrari. By analyzing telemetry data sourced from the FastF1 library, sampled at 4 Hz and examined sector by sector, we illuminate the critical technical factors that drive qualifying outcomes and reveal the strategic decisions behind each car’s configuration.
+
+- Lando Norris serves as the benchmark against the other three elite drivers—Max Verstappen, Lewis Hamilton, and Charles Leclerc—allowing us to assess critical metrics such as throttle application, braking strategies, gear shifting, and traction. Our findings clearly indicate that, despite Verstappen, Hamilton, and Leclerc achieving higher top speeds, it is Norris's unique driving style that grants him a competitive edge over his rivals.
+
+- Furthermore, this project also tackles reliability concerns surrounding the RB20 throughout the 2024 season, ensuring a comprehensive understanding of its performance dynamics.
+
+---
+
+### Tools & Technologies Used
+```{python}
+#| echo: false
+import pandas as pd
+
+df = pd.DataFrame({
+    "Tool / Library": [
+        "Python",
+        "FastF1",
+        "Matplotlib / Seaborn",
+        "Quarto (.qmd)",
+        "F1 TV Pro"
+    ],
+    "Purpose": [
+        "Core scripting language for data manipulation and analysis",
+        "Accessed official telemetry, lap timing, and car data from Formula 1",
+        "Visualization of telemetry graphs (speed, throttle, brake, delta)",
+        "Report formatting and integration of Python code, graphs, and narrative",
+        "Cross-referenced onboard footage for validation of telemetry findings"
+    ]
+})
+
+df.style.set_properties(**{'white-space': 'pre-wrap'})
+
+```
+
+---
+### Introduction
+In this project, I will analyze the qualifying and race day performances of the Spanish Grand Prix 2024. The objective is to gain insights into team strategies, individual driver performances, and the reliability of key vehicles, specifically focusing on the RB20. Additionally, I will explore future projections concerning the performance of the RB20 compared to the RB21 and assess the potential for Max Verstappen to secure another world championship title.
+
+---
+
+# Research Questions
+
+### Team Performance in the 2024 Spanish Grand Prix Qualifying
+- How did the qualifying performances of Oracle Red Bull Racing, McLaren, Ferrari, and Mercedes compare in terms of pace, consistency, and sector strengths?
+- In what ways did each team’s strategic approach including tyre selection, setup choices, and session timing influence their qualifying results?
+
+---
+
+### Driver Performance in the 2024 Spanish Grand Prix Qualifying
+- How did the lead drivers from Ferrari, Oracle Red Bull Racing, McLaren, and Mercedes perform relative to each other in qualifying, and what were their respective strengths and weaknesses?
+- What were the primary factors (e.g., car setup, driver technique, track evolution) that influenced individual driver performance during the qualifying sessions?
+
+---
+
+### Reliability and Performance of the RB20
+- What specific reliability concerns emerged with the RB20 during the race, and how did these issues contrast with its qualifying performance?
+- What factors contributed to the discrepancies between the RB20’s strong qualifying pace and its performance drop-off or challenges during the race itself?
+
+---
+
+# Team Performance during qualifying session in Spanish GP 2024
+:::{.center}
+![](Fastest_lap_team.png)
+:::
+### Why I Choose Spanish Grand Prix 2024?
+- I chose the Spanish Grand Prix for this analysis because it is one of the most efficient tracks for evaluating car performance and lap times The graph above displays the fastest lap times set by the quickest driver from each team during the third day of the qualifying session.
+The fastest lap was recorded by Lando Norris in the MCL38 setting a time of 1:11.383. He was closely followed by Max Verstappen in the RB20, who posted a lap time of 1:11.403 just 0.020 seconds behind. Lewis Hamilton in the W15 secured third place with a time of 1:11.701.
+- All cars in Q3 used soft tyres, ensuring optimal grip and performance. The weather conditions were generally favorable for racing, with sunny skies in the morning, becoming partly cloudy in the afternoon, and a slight chance of showers. Temperatures ranged from 24°C to 27°C during the session, with lows around 17°C.
+- From the graph, it is evident that the performance gap between teams is extremely narrow, highlighting the competitiveness of this qualifying session.
+
+---
+
+## Lando Norris (McLaren - MCL38): 01:11.383
+
+### Analysis
+Lando Norris achieved the fastest lap for the 2024 Spanish Grand Prix with an excellent pace of 01:11.383, a substantial increase over his 2023 qualifying time of 01:13.270 from Q3.  This impressive result underlines McLaren's significant advancement with the MCL38.  The car's strong aerodynamic package and efficient power unit were key in producing great performance on the Circuit de Barcelona-Catalunya, a course famed for its challenging high-speed turns and technical portions.
+
+### Key Improvements in the MCL38
+
+- **Aerodynamics**
+    - The MCL38 had an improved aerodynamic design with higher downforce and lower drag compared to the MCL37, which was principally based on the ground-effect concept released in 2022.  The enhanced aerodynamics helped the car to maintain higher speeds through the track's severe bends, such as Turns 3 and 9, while also allowing for faster acceleration out of slower parts like the final chicane.
+
+- **Power Unit**
+    - The Mercedes power unit in the MCL38 has been further tuned, with increased energy deployment and improved efficiency.
+    -  This modification proved especially useful in the high-speed sections of the track, where accurate power delivery and swift acceleration are critical.
+
+- **Tyre Management**
+    - The MCL38 had superior tyre management, allowing Norris to push harder in qualifying without substantial deterioration.  This was a significant improvement over the MCL37, which had occasional issues with tyre wear during race simulations.
+
+### Strategy
+- McLaren's aim for the MCL38 was to maximize downforce and refine aerodynamic efficiency in order to succeed in the technical aspects of the Circuit de Barcelona-Catalunya.  This approach differed from the MCL37's emphasis on conforming to ground-effect restrictions.  The team also focused on optimizing the power unit's deployment to provide consistent performance in both high-speed bends and straights.
+
+### Impact on Performance
+- The MCL38's increased downforce allowed Norris to carry greater speed through the track's difficult bends, including the sweeping Turn 9 and the tight Turn 5.
+- McLaren's revised drag reduction increased top speeds on the main straight and DRS zones, giving them a competitive advantage over rivals.  
+- The improved power unit deployment resulted in swift acceleration out of slower corners, such as the final chicane, which is essential for setting fast lap times.
+
+### Conclusion
+Lando Norris' 01:11.383 lap time during the 2024 Spanish Grand Prix qualifying session demonstrates McLaren's tremendous progress with the MCL38.  The car's refined aerodynamics, optimized power unit, and improved tyre management all contributed to its exceptional performance.  This performance not only indicates McLaren's ability to cut the gap on the front-running teams, but it also highlights their strategic focus on overcoming the unique challenges of the Circuit de Barcelona-Catalunya.
+
+---
+
+## Max Verstappen (Red Bull Racing - RB20): 1:11.403
+
+### Analysis
+
+- **Aerodynamics**
+    - The nose of the RB20 is longer than that of the RB19, extending past the front endplates.  This change was made to increase airflow to the front suspension, which enhanced front-end stability.
+    - In addition, the team redesigned the side pods by adding vertical slots to improve cooling efficiency and aerodynamic performance.
+    - Changes were also made to the underfloor aerodynamics to improve the car's performance in low-speed corners.
+    - The RB20 performed admirably throughout the Spanish Grand Prix, especially in Turn 3, where its aerodynamic stability and minimal drag allowed for ideal handling.
+    - The rear stability of the RB20 allowed the car to exit the bend at maximum speed and acceleration.
+    - Furthermore, at Turn 9 a high-speed bend that requires strong downforce and low drag, the RB20 outperformed the majority of its competitors, allowing for consistent performance through the corner.
+
+- **Power Unit Strategy**
+
+    - **Honda RA621H Power Unit**
+        - The RB20 used the Honda RA621H power unit, which provided considerable improvements over the RB19's engine in terms of performance, reliability, and energy recovery efficiency.
+        -  These gains were especially obvious in the car's ability to accelerate rapidly out of slow corners and maintain high speeds on straights.
+
+- **Energy Deployment**
+    - Red Bull successfully refined the Energy Recovery System (ERS) deployment to improve performance in important areas, including:
+    - Exiting Turn 14: The final chicane required precise throttle control and rapid acceleration to the main straight.  The RB20's power unit performed admirably here, allowing Verstappen to gain crucial time.
+    - Turn 5 (Bottas Corner): The car's mechanical grip and power unit efficiency helped to reduce tyre degradation, allowing Verstappen to drive harder through this high-speed corner.
+
+### Tyre Strategy
+
+- **Qualifying**
+    - To enhance performance, Red Bull used soft tyres in qualifying.
+    - The team focused on aggressive tyre warm-up techniques to ensure that the tyres achieved their ideal temperature early in the lap, which was critical for setting a fast time in Q3.
+
+- **Race Considerations**
+    - While qualifying was centred on single-lap performance, Red Bull also stressed tyre management during the race.
+    - Given the Circuit de Barcelona-Catalunya's reputation for high tire degradation, the team worked hard to develop a setup that properly balanced qualifying speed and race durability.
+
+### Conclusion
+Red Bull Racing's strategy for the 2024 Spanish Grand Prix focused on aerodynamic optimization, power unit efficiency, and strategic tire management.  The RB20 had a longer nose, vertical sidepod slots, and a refined underfloor design which improved airflow and stability.  Moreover, the Honda power unit demonstrated both strong performance and reliability.  Max Verstappen displayed his skill by pushing the car to its limits, notably in high-speed bends like Turn 3 and Turn 9, resulting in a timing of 1:11.403, just 0.020 seconds behind Lando Norris.  This plan displays Red Bull's technical expertise and ability to react to the unique challenges posed by the Circuit de Barcelona-Catalunya.
+
+--- 
+
+## Lewis Hamilton (Mercedes - AMG W15 E Performance):  1:11:701 
+
+### Analysis
+
+- **Aerodynamics**
+    - The W15 represented a notable shift from the W14, as Mercedes focused on enhancing stability and ensuring consistent downforce across various speed ranges. This adjustment was a direct response to the W14’s challenges with unpredictable handling and proposing during the 2023 season. The team revamped the sidepods, departing from the controversial "zero-pod" design utilized in the W14. This modification significantly improved airflow management and cooling efficiency, enabling the car to produce more reliable downforce in both high-speed and low-speed corners.
+    - Nonetheless, although consistent downforce is advantageous on circuits such as the Circuit de Barcelona-Catalunya, which includes a combination of high-speed turns, intricate sections, and lengthy straights, there are possible drawbacks. For instance:
+        - In Turn 3 and Turn 9, the consistent downforce may cause heightened tyre wear, requiring drivers to be more cautious with their speed. This could lead to time losses against competitors such as McLaren, Ferrari, and Red Bull Racing, who might possess superior tyre management techniques.
+        - The focus on constant downforce can also increase drag, reducing top speed on the main straight and making overtaking more difficult.
+
+- **Power Unit**
+    - The W15 showcased a completely overhauled power unit, featuring major enhancements in the energy recovery system (ERS) and its deployment strategies. These advancements resulted in improved acceleration and maximum speed, which were essential for performance during both qualifying and race conditions. Nonetheless, the emphasis on consistent downforce can place extra pressure on the power unit and ERS, particularly in high speed corners such as Turn 3 and Turn 9. This could introduce potential reliability concerns, but Mercedes successfully managed to mitigate these risks throughout the 2024 season.
+
+- **Tyre Management**
+    - Mercedes chose to use soft tyres during the qualifying session, emphasizing a setup that balanced qualifying speed with race longevity. The team implemented aggressive techniques to warm up the tyres, ensuring they reached the optimal temperature range early in the lap essential for achieving a competitive time in Q3. However, the increased downforce levels of the W15 may contribute to greater tyre wear during the race, requiring Hamilton to be more strategic with his pace compared to competitors who manage their tyres more effectively.
+
+### Conclusion
+- Lewis Hamilton's qualifying time of 1:11.701 during the 2024 Spanish Grand Prix reflects the considerable advancements achieved by Mercedes with the W15. The car's reworked aerodynamics, especially the departure from the "zero-pod" design, enhanced stability and consistency in downforce, enabling Hamilton to excel in both high-speed corners like Turn 3 and Turn 9 and in the intricate final chicane. The upgraded power unit, featuring improved energy recovery and deployment strategies, offered enhanced acceleration and top speed, further elevating the vehicle's overall performance.
+
+--- 
+
+## Charles Leclerc (Ferrari - SF-24): 1:11:731
+
+### Analysis
+
+- **Aerodynamics**
+    - The SF-24 features significant aerodynamic improvements over its predecessor, the SF-23. The sidepods have been redesigned with inspiration from Red Bull’s concept, featuring a more sculpted shape to enhance airflow efficiency. This has contributed to better overall aerodynamic performance.
+    - The front wing has been re-engineered to address the stability issues that plagued the SF-23. The previous design lacked balance, making the car unpredictable in both high-speed and low-speed corners. The new front wing provides improved stability, allowing for more consistent performance across different corner types.
+    - At the rear, the SF-23’s wing generated excessive drag, which negatively impacted top speed and tire wear. The SF-24 addresses this with a more efficient rear wing design, reducing drag and improving straight-line speed. This was particularly evident from Turn 14 to Turn 1 at the Circuit de Barcelona-Catalunya, where the car demonstrated superior top speed and tire management.
+    - In high-speed corners, such as Turn 3 and Turn 9, the SF-24 showcased competitive performance, a testament to its enhanced aerodynamic efficiency. However, in low-speed corners like Turn 10 and Turn 14, the car exhibited minor traction issues, which slightly affected lap times.
+
+### Power Unit
+- The SF-24 retains the same power unit as the SF-23, the 066/10 hybrid power unit. However, Ferrari has improved the cooling efficiency of the engine, allowing for better thermal management and sustained performance over longer stints. While the power output remains similar, the enhanced cooling system contributes to greater reliability and consistency during races.
+
+### Tire Management
+- During the race, Ferrari faced challenges related to tire management. The team struggled with pace and tire degradation, possibly due to a limited understanding of the new updates introduced to the car. This suggests that while the SF-24 showed promise in qualifying, there were underlying issues affecting its performance consistency during longer runs in the race.
+
+### Conclusion
+- Charles Leclerc completed the lap in 1:11.731, which was competitive and faster than most of the field. However, the SF-24 was unable to match the performance of cars like the Red Bull RB20, McLaren MCL38, and Mercedes W15 during the qualifying session in the Spanish Grand Prix. This underperformance in race conditions, particularly in long runs, highlights the need for further improvements in tire management and race pace.
+
+---
+
+# Comparative Telemetry Analysis of Driver Performances
+## Spanish Grand Prix 2024 - Qualifying session
+### Abstract
+- This research analyses the qualifying performances of Lando Norris (McLaren) with Max Verstappen (Red Bull Racing), Lewis Hamilton (Mercedes-AMG), and Charles Leclerc (Ferrari) during the 2024 Spanish Grand Prix. Using telemetry data sampled at 4 Hz, I investigated the driving styles, car performances, and sector-specific strategies that led Norris to marginally out-qualify the three drivers.
+
+### Data Methodology
+- Data Source: Official telemetry data from Fastf1 supplemented with an onboard camera and timing sheet from F1 TV Pro.
+
+- Sampling Rate: 4Hz (every 50 milliseconds). Minor inaccuracies due to the sampling rate limitation are acknowledged but deemed acceptable for high-level analysis. 
+
+- Variables:
+    - Delta time (s)
+    - Speed (km/h)
+    - Throttle (%)
+    - Brake (%)
+    - Gear Selection
+    - Handling change (°)
+
+- The most optimal tyres for this track are soft compound, which was used by all the drivers. The tyre life of all the drivers that I am comparing was 2 laps. The track temperature was nearly the same.  
+
+## Lando Norris V/S Max Verstappen
+### Objective
+- The objective of this section is to compare Max Verstappen's performance with that of the fastest qualifier, Lando Norris, during the qualifying session of the Spanish Grand Prix in 2024. By analyzing the telemetry data, I have examined the differences in driving techniques between the two drivers and how each performed in various turns.drivers and how each driver has performed in turns. 
+
+- Overview of Lap Times:
+```{python}
+#| echo: false 
+import pandas as pd
+
+df = pd.DataFrame({
+    "Name": ["Lando Norris", "Max Verstappen", "Gap"],
+    "LapTime": ["1:11.383", "1:11.403", "+0.020s"],
+    "Sector 1": ["21.383s", "21.369s", "-0.014s"],
+    "Sector 2": ["28.402s", "28.541s", "+0.139s"],
+    "Sector 3": ["21.598s", "21.493s", "-0.105s"],
+    "Top Speed (Speed Trap)": ["323 km/h", "328 km/h", "Verstappen faster"]
+})
+
+df
+```
+### Telemetry Graph 
+:::{.center}
+![](tempNOR_VER.png)
+:::
+### Sector Analysis
+- Sector 1: Verstappen's Aggressive Opening
+    - Turn 1: Verstappen brakes later, maximizing RedBull's straight line advantage. 
+    - Turn 2 - 4: Norris’s MCL38 demonstrated superior traction out of slower corners, narrowing Verstappen's early gain.
+    - Sector time: Verstappen marginally faster by 0.014s. 
+- Sector 2: Norris's Decisive Gain
+    - Norris capitalized on McLaren’s mechanical grip and his smooth driving inputs.
+    - Turn 5: Early brake release from Norris enabled a stronger exit.
+    - Turns 6–7: Norris carried more mid-corner speed despite braking earlier, gaining significant time.
+    - Sector time: Norris faster by 0.139s — the critical sector of the lap.
+- Sector 3: Verstappen's Counterattack
+    - Verstappen pushed hard into the braking zone, notably turn 10 - 11.
+    - Norris countered with a more smoother approach to the throttle in the final chicane.
+    - Sector time: Verstappen faster by 0.105s, but not enough to overcome the gap from sector 2. 
+
+### Driving Style Comparison
+```{python}
+#| echo: false 
+import pandas as pd
+
+df = pd.DataFrame({
+    "Aspect": ["Throttle Application", "Braking Style", "Cornering", "Sector Strength", "Overall Pace"],
+    "Lando Norris": ["Smooth, progressive", "Early release, smooth", "Higher mid-corner speed", "Sector 2", "Stronger in technical areas"],
+    "Max Verstappen": ["Aggressive spikes", "Late, high-pressure braking", "Sharp entries, fast rotation", "Sector 1 and 3", "Strong in power zones (straights)"]
+})
+
+df
+```
+### Insights from Telemetry graph
+- Delta time: Norris had gained significantly in sector 2, offesting the advantage of Verstappen in sector 1 and 3.
+- Throttle Behavior: According to the data, Verstappen had a more aggressive approach to throttle, whereas Norris had a more smoother approach to it, aiding to more traction.
+- Braking: Verstappen's later braking and confindence in RB20 help him gain on Lando in sector 1 and 3 however Lando's earlier releases on the brake helped him in sector 2. 
+- Cornering: Norris carried more speed in complex turns, showing that MCl 38 had better setup. 
+
+### Conclusion 
+- Norris's lead of +0.020 seconds underscores the benefits of a calm and accurate cornering method compared to Verstappen's more forceful driving approach. While Verstappen was faster in the high-speed areas, Norris's success in Sector 2 turned out to be crucial. The combination of McLaren's excellent traction and Norris's gentle throttle control resulted in a lap time that ev.
+
+## Lando Norris V/S Charles Leclerc
+### Objective
+- The objective of this section is to conduct a comparative analysis of Charles Leclerc's performance relative to that of Lando Norris, the fastest qualifier, during the qualifying session of the 2024 Spanish Grand Prix. Through a detailed examination of the telemetry data, I have investigated the differences in driving techniques exhibited by both drivers and assessed their performance across various turns on the circuit. 
+
+- Overview of Lap Times:
+```{python}
+#| echo: false 
+import pandas as pd
+
+df = pd.DataFrame({
+    "Name": ["Lando Norris", "Charles Leclerc", "Gap"],
+    "LapTime": ["1:11.383", "1:11.731", "+0.348s"],
+    "Sector 1": ["21.383s", "21.390s", "+0.007s"],
+    "Sector 2": ["28.402s", "28.672s", "+0.270s"],
+    "Sector 3": ["21.598s", "21.669s", "+0.071s"],
+    "Top Speed (Speed Trap)": ["323 km/h", "327 km/h", "Leclerc faster"]
+})
+
+df
+```
+### Telemetry Graph
+:::{.center}
+![](tempNOR_LEC.png)
+:::
+
+### Sector Analysis
+- Sector 1: Close Battle
+    - Into Turn 1, Leclerc braked earlier than Norris, which helped him stabilise the SF-24 and stay ahead through Turn 1 and into Turn 2.
+    - However, Norris demonstrated the MCL38’s superior traction by shifting to 6th gear quicker than Leclerc and applying throttle earlier, highlighting his confidence in the car’s grip.
+    - Through Turns 3 to 4, both drivers were closely matched, finishing the sector with Norris just 0.007s ahead.
+- Sector 2: Norris's Breakaway
+    - This is where Norris built his lead. At Turn 5, Norris released the brakes earlier, carrying more speed through the corner and getting a better exit.
+    - Exiting Turn 7, Norris again capitalised on the MCL38’s acceleration, shifting to gear 5 about 26 metres earlier than Leclerc.
+    - Although Norris made a small mistake by upshifting too early to gear 7, the gain was already significant.
+    - Through Turns 8, 9, and 10, Norris maintained his advantage, while Leclerc attempted to claw back time with a brave late-braking move at Turn 10 — but it wasn’t enough.
+    - Norris completed the sector 0.270s faster than Leclerc, the most decisive part of the lap.
+- Sector 3: Norris Consolidates
+    - In Turns 13 and 14, Leclerc seemed less confident in the Ferrari, applying heavier braking and delaying throttle application compared to Norris.
+    - Norris, with smoother and earlier throttle application, maintained his lead to finish the final sector 0.071s ahead of Leclerc.
+
+### Driving Style Comparison
+```{python}
+#| echo: false 
+import pandas as pd
+
+df = pd.DataFrame({
+    "Aspect": ["Throttle Application", "Braking Style", "Cornering", "Sector Strength", "Overall Pace"],
+    "Lando Norris": ["Smooth, progressive", "Early release, smooth", "Higher mid-corner speed", "Sector 2", "Stronger in technical areas"],
+    "Charles Leclerc": ["More cautious, later application", "Earlier brake application, less aggressive", "Stabilized entry, less confident exit", "Sector 1 marginal, lost time in Sector 2", "Struggled with traction compared to Norris"]
+})
+
+df
+```
+### Insights from Telemetry Graph
+- The most significant time gain for Norris came in Sector 2, where his earlier throttle application and quicker gear changes allowed him to build a clear gap.
+- Leclerc showed better top speed at the speed trap, indicating Ferrari’s power unit strength, but couldn’t fully capitalise on it due to traction limitations exiting slow corners.
+- Norris’s approach was marked by smoother, progressive throttle use and earlier braking release, extracting maximum performance from the MCL38.
+- Leclerc’s more cautious style in this lap reflected either car limitations or a more conservative approach to maintain stability, costing him time especially in acceleration zones.
+
+### Conclusion
+- Lando Norris completed a lap that was 0.348 seconds faster than Charles Leclerc’s time, illustrating the combined advantages of McLaren's mechanical grip and Norris's assured driving style. While Leclerc remained competitive in Sector 1 and executed bold maneuvers in Sector 3, the pivotal difference was evident in Sector 2. Norris's smooth input, earlier throttle application, and confidence in the MCL38’s traction enabled him to establish a clear lead over the Ferrari driver. Ultimately, Norris's technique resulted in not only a rapid lap time but also one that was remarkably controlled and precise a commendable achievement in qualifying.
+
+## Lando Norris V/S Lewis Hamilton
+### Objective
+-  The objective of this section is to compare Lewis Hamilton’s qualifying lap with Lando Norris’s pole position lap at the 2024 Spanish Grand Prix. Through detailed telemetry and sector analysis, we’ll understand the different driving techniques and car performances of both drivers, highlighting how McLaren and Mercedes compared in this intense qualifying session.
+
+- Overview of Lap Times:
+```{python}
+#| echo: false 
+import pandas as pd
+
+df = pd.DataFrame({
+    "Name": ["Lando Norris", "Lewis Hamilton", "Gap"],
+    "LapTime": ["1:11.383", "1:11.701", "+0.318s"],
+    "Sector 1": ["21.383s", "21.459s", "+0.076s"],
+    "Sector 2": ["28.402s", "28.543s", "+0.141s"],
+    "Sector 3": ["21.598s", "21.699s", "+0.101s"],
+    "Top Speed (Speed Trap)": ["323 km/h", "327 km/h", "Hamilton faster"]
+})
+
+df
+```
+### Telemetry Graph
+:::{.center}
+![](tempNOR_HAM.png)
+:::
+
+### Sector Analysis
+- Sector 1
+    - At Turn 1, Hamilton opted for a late braking move, showcasing confidence and trying to maximise entry speed.
+    - However, this aggressive approach compromised his exit, as the late braking led to slower acceleration out of the corner. Norris, with a smoother and earlier throttle application, gained time through Turn 2.
+    - Through Turns 3 and 4, Norris maintained this advantage, keeping his line cleaner and faster.
+    - Norris finished Sector 1 with a gap of 0.076s ahead of Hamilton.
+- Sector 2
+    - After Turn 4, Hamilton was notably aggressive again, braking much later than Norris into Turn 5. Impressively, Hamilton was already in 8th gear through Turn 4, highlighting Mercedes' strong gearbox performance and acceleration in higher gears.
+    - Through Turns 5, 6, and the beginning of Turn 7, both drivers were closely matched in pace.
+    - However, exiting Turn 7, McLaren’s superior traction and acceleration gave Norris a clear advantage as he pulled away from Hamilton.
+    - Norris completed Sector 2 with a 0.141s advantage over Hamilton, growing his total lead further.
+- Sector 3
+    - In Sector 3, Hamilton pushed hard to close the gap, particularly gaining ground through Turn 12, where he carried good speed and momentum.
+    - However, exiting the final chicane at Turn 13, Hamilton made a small but costly error, he didn’t apply full throttle pressure immediately, losing valuable acceleration on the run to the line.
+    - Norris, meanwhile, kept his inputs smooth and consistent, completing the final sector 0.101s faster than Hamilton.
+
+### Driving Style Comparison
+```{python}
+#| echo: false 
+import pandas as pd
+
+df = pd.DataFrame({
+    "Aspect": ["Throttle Application", "Braking Style", "Cornering", "Sector Strength", "Overall Pace"],
+    "Lando Norris": ["Smooth, progressive", "Early release, smooth", "Higher mid-corner speed", "Sector 2", "Stronger in technical areas"],
+    "Lewis Hamilton": ["More aggressive", "Late brake application, very aggressive", "Flashes of strength, higher speed", "Sector 2", "good top speed"]
+})
+df
+```
+
+### Insights from Telemetry Graph
+- Delta Time: Norris’s consistent advantage came primarily from better exits and acceleration, especially at Turn 7 and through Sector 2.
+- Top Speed: Hamilton had a higher top speed at the speed trap, showing Mercedes’ strength on the straights. However, this wasn't enough to overcome McLaren’s traction advantage in the technical sections.
+- Gear Shifts: Mercedes’ gear shifting was impressive, with Hamilton already in 8th gear through Turn 4, showing their efficiency at high speeds. Still, Norris’s car had better exit drive out of slow corners.
+- Errors: Hamilton’s slight hesitation on throttle exiting the final chicane cost him precious time. Norris avoided such errors, maintaining a clean and efficient lap throughout.
+
+### Conclusion
+- Lando Norris’s lap, 0.318 seconds faster than Lewis Hamilton, showcased a combination of McLaren’s superior traction and Norris’s precise, confident driving style. While Hamilton’s aggressive braking and Mercedes’ straight-line speed helped him in certain sections, Norris’s advantage in corner exits and his smooth driving approach proved decisive. Sector 2, in particular, was where Norris truly pulled away, and despite Hamilton’s efforts to close the gap in the final sector, Norris’s error-free execution secured his lead. 
+
+---
+
+# Reliability and performance of RB20
+
+### Introduction
+- In this section, I analyze the performance shortcomings of the RB20, which contributed to Red Bull Racing finishing third in the Constructors' Championship and failing to secure a championship title since 2021. Throughout the 2024 Formula 1 season, the RB20 was forced to retire from five races. In addition to these retirements, there were numerous driver complaints over team radio regarding performance related issues during Grand Prix events. These problems collectively hampered Red Bull’s ability to maintain competitiveness against rivals such as Mercedes and McLaren.
+
+- Key Reasons for Underperformance of the RB20:
+    - **Narrow Operating Window and Developmental Limitations**
+        - According to Red Bull advisor Helmut Marko, one of the main issues was the car's narrow operational window, which restricted its adaptability and limited development opportunities. Technical director Pierre Waché elaborated that the most significant concern was a correlation discrepancy—data from computational fluid dynamics (CFD) simulations and the simulator did not match the actual on-track performance. This mismatch compromised setup strategies and development directions throughout the season.
+    - **Neglected Design Elements**
+        - Red Bull admitted to overlooking certain design elements that later proved to significantly influence performance. Although not deliberately excluded, the team acknowledged that they may not have given these elements enough attention during development. These oversights remained unresolved by the end of the season and have been prioritized for correction in the RB21 for 2025.
+    - **Loss of Downforce**
+        - The team also encountered unexpected downforce losses in specific areas of the car. Crucially, these issues were not apparent in wind tunnel testing, indicating a disconnect between aerodynamic modeling and real-world behavior—a serious concern in modern F1 design.
+    - **Balance and Inertia to Change**
+        - Early season dominance led Red Bull to adopt a conservative approach, refraining from major modifications to the RB20. However, once the European leg of the season began, McLaren and other teams closed the gap significantly. Waché admitted that the team was reluctant to alter the car's fundamental setup, and as rivals gained pace, it became clear that balance issues were one of RB20’s most limiting factors.
+    - **Inability to Fully Unlock Potential**
+        - According to Waché, the RB20 never reached its full performance potential. He noted that reverting to older specifications would not have improved results, underlining that the development path taken simply failed to deliver the expected gains.
+
+### RedBull's DNF throughout 2024 season
+```{python}
+#| echo: false 
+import pandas as pd
+
+df = pd.DataFrame({
+    "Grand Prix": ["Australian Grand Prix", "Australian Grand Prix", "Canadian Grand Prix", "Qatar Grand Prix", "Abu Dhabi Grand Prix"],
+    "Drivers" : ["Max Verstappen","Sergio Perez","Sergio Perez","Sergio Perez","Sergio Perez"],
+    "Reasons" : ["Brake failure","Collision with Haas","Spin, rear wing damage, retired","Clutch issue","Collision damage, retired"]
+})
+df
+``` 
+
+---
+
+# Reflection
+
+- Analyzing the 2024 Spanish Grand Prix qualifying session allowed me to effectively harness my data science skills in a dynamic motorsport environment. Through an in-depth examination of car performance and telemetry data, I developed a robust understanding of the strategies and technical aspects at play, and I recognized just how crucial even the slightest error can be in affecting lap times.
+- One of the most impactful insights from this project was the realization of how different driving styles significantly influence lap times. Lando Norris’s smooth throttle application, for instance, demonstrated a clear advantage on the track compared to other styles. By meticulously comparing the telemetry data of Lando Norris, Max Verstappen, Charles Leclerc, and Lewis Hamilton, I gained valuable insights into the interplay of mechanical grip, aerodynamic balance, and driver inputs in shaping sector performance. This experience not only sharpened my analytical abilities but also deepened my understanding of vehicle dynamics and setup optimization.
+- Additionally, investigating the underperformance of the RB20 equipped me with vital insights into the challenges faced by elite racing teams. I thoroughly explored critical issues, including the correlation mismatch between simulation data and on-track performance, as well as aerodynamic flaws that contributed to the car's shortcomings.
+- This project has fueled my passion for Formula 1 and data science, driving me to seek hands-on experience with a Formula 1 team where I am eager to contribute my skills and learn from the best in the industry.
+
+---
+
+# Work Cited
+
+- F1 - The Official Home of Formula 1® Racing, https://www.formula1.com. Accessed 22 April 2025.
+
+- F1 TV | Home, https://f1tv.formula1.com. Accessed 22 April 2025.
+
+- Brockwell, Naomi. “F1 Telemetry - How the car performance translates to those wiggly lines.” YouTube, 19 October 2020, https://www.youtube.com/watch?v=lfqkhCCq5sg. Accessed 22 April 2025.
+
+- “FastF1.” FastF1, https://docs.fastf1.dev.
+
+- Jasper. “How I Analyze Formula 1 Data With Python: 2021 Italian GP.” How I Analyze Formula 1 Data With Python: 2021 Italian GP, Jasper, 27 Sep 2021, https://medium.com/towards-formula-1-analysis/how-i-analyze-formula-1-data-with-python-2021-italian-gp-dfb11db4b73.
+
+- Priestley, Marc. “Analysing Formula 1 Data with Ex F1 Engineer - 2022 Bahrain and Jeddah.” YouTube, 20 April 2022, https://www.youtube.com/watch?v=2PUz2EvbHRw. Accessed 22 April 2025.
+
+- Vinel, Ben, and Ronald Vording. “RED BULL EXPLAINS WHAT WENT WRONG WITH RB20 F1 CAR.” RED BULL EXPLAINS WHAT WENT WRONG WITH RB20 F1 CAR, 11 Jan 2025, https://www.motorsport.com/f1/news/red-bull-explains-what-went-wrong-with-rb20-f1-car/10687910/. Accessed 15 April 2025.
